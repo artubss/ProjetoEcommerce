@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANTI - Loja Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="AVANTI" class="logo-img"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="O que você está procurando?">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#" class="login-link">Entre ou cadastre-se</a>
+                <a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+            </div>
+        </div>
+        
+        <!-- Menu de Categorias -->
+        <div class="categories-menu-container">
+            <div class="container">
+                <div class="categories-toggle">
+                    <button id="categories-toggle-btn">
+                        <i class="fas fa-bars"></i> Todas as Categorias
+                    </button>
+                    <div class="categories-dropdown" id="categories-dropdown">
+                        <div class="categories-grid">
+                            <div class="category-column">
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                    <div class="subcategories-panel">
+                                        <div class="subcategories-grid">
+                                            <div class="subcategory-column">
+                                                <h4>Categoria</h4>
+                                                <ul>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subcategory-column">
+                                                <h4>Categoria</h4>
+                                                <ul>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subcategory-column">
+                                                <h4>Categoria</h4>
+                                                <ul>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                    <li><a href="#">Categoria</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="subcategory-promo">
+                                                <img src="images/mug.jpg" alt="Confira os Produtos Que acabaram de chegar">
+                                                <div class="promo-text">
+                                                    <h3>Confira os Produtos Que acabaram de chegar</h3>
+                                                    <a href="#" class="promo-btn">VER TODOS</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div class="department-item">
+                                    <a href="#" class="department-link">Departamento <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Camisetas</a></li>
+                        <li><a href="#">Calças</a></li>
+                        <li><a href="#">Calçados</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#">Novidades</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Result Display -->
+    <div id="search-result" class="container search-result"></div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <img src="images/hero-banner.jpg" alt="Super Sale - Até 50% OFF">
+    </section>
+
+    <!-- Products Carousel Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Camisetas populares</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="products-carousel">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Feature Section -->
+    <section class="product-feature">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="images/mug.jpg" alt="Caneca AVANTI">
+                </div>
+                <div class="feature-text">
+                    <h2>LOREM IPSUM</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur nibh finibus leo. Morbi tristique lobortis elit, id condimentum eros volutpat at. Suspendisse potenti. Sed porttitor lectus id libero ultrices, vel tincidunt nunc posuere. Ut porttitor hendrerit sapien, ac porta nibh tincidunt vel. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur nibh finibus leo. Morbi tristique lobortis elit, id condimentum eros volutpat at. Suspendisse potenti. Sed porttitor lectus id libero ultrices, vel tincidunt nunc posuere. Ut porttitor hendrerit sapien, ac porta nibh tincidunt vel. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>LOREM IPSUM</h2>
+            <div class="benefits-container-horizontal">
+                <div class="benefits-text">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-image-right">
+                    <img src="images/mug-table.jpg" alt="Caneca AVANTI">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Product Feature Section -->
+    <section class="product-feature">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-image">
+                    <img src="images/mug-angle.jpg" alt="Caneca AVANTI">
+                </div>
+                <div class="feature-text">
+                    <h2>LOREM IPSUM</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur nibh finibus leo. Morbi tristique lobortis elit, id condimentum eros volutpat at. Suspendisse potenti. Sed porttitor lectus id libero ultrices, vel tincidunt nunc posuere. Ut porttitor hendrerit sapien, ac porta nibh tincidunt vel. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur nibh finibus leo. Morbi tristique lobortis elit, id condimentum eros volutpat at. Suspendisse potenti. Sed porttitor lectus id libero ultrices, vel tincidunt nunc posuere. Ut porttitor hendrerit sapien, ac porta nibh tincidunt vel. Fusce vehicula magna condimentum nibh mollis, quis fringilla magna venenatis non.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Products Carousel Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Camisetas populares</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="products-carousel">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-tshirt.jpg" alt="Camiseta Branca">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Básica Branca</h3>
+                            <div class="product-price">
+                                <span class="original-price">R$ 99,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Banner -->
+    <section class="full-width-banner">
+        <img src="images/banner-full.jpg" alt="Entre em contato conosco e verifique a disponibilidade para sua região!">
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Cadastre-se em nossa <span>newsletter</span></h2>
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Deixe sua mensagem (opcional)" class="message-input">
+                </div>
+                <button type="submit" class="submit-btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="AVANTI">
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Institucional</h3>
+                        <ul>
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="#">Nossas Lojas</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Termos e Condições</a></li>
+                            <li><a href="#">Trabalhe Conosco</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Dúvidas de Venda</h3>
+                        <ul>
+                            <li><a href="#">Como Comprar</a></li>
+                            <li><a href="#">Prazos de Entrega</a></li>
+                            <li><a href="#">Formas de Pagamento</a></li>
+                            <li><a href="#">Promoções e Cupons</a></li>
+                            <li><a href="#">Trocas e Devoluções</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Atendimento</h3>
+                        <ul>
+                            <li><a href="#">Central de Atendimento</a></li>
+                            <li><a href="#">Fale Conosco</a></li>
+                            <li><a href="#">Meus Pedidos</a></li>
+                            <li><a href="#">Perguntas Frequentes</a></li>
+                            <li><a href="#">Assistência Técnica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <img src="images/vtex-pci.png" alt="VTEX PCI Certified">
+                <img src="images/lets-encrypt.png" alt="Let's Encrypt">
+                <img src="images/vtex.png" alt="VTEX">
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 AVANTI - Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+                <div class="footer-credits">
+                    <span>Desenvolvido por:</span>
+                    <img src="images/vtex.png" alt="VTEX">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
